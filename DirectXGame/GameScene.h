@@ -1,5 +1,6 @@
 #pragma once
 #include "KamataEngine.h"
+#include"Player.h"
 class GameScene {
 public:
 
@@ -16,7 +17,7 @@ public:
 	void Draw();
 
 	//テクスチャハンドル
-	uint32_t textureHandol_ = 0;
+	uint32_t textureHandle_ = 0;
 
 	//3Dモデル
 	KamataEngine::Model* model_ = nullptr;
@@ -25,5 +26,10 @@ public:
 	KamataEngine::WorldTransform worldTransform_;
 	//カメラ
 	KamataEngine::Camera camera_;
+
+	private:
+	//自キャラ
+	Player* player_ = nullptr;
+
 
 };
